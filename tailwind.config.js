@@ -20,7 +20,7 @@ export default {
       },
       boxShadow: {
         panel: '0 4px 4px rgba(0, 0, 0, .25)',
-        tab: '0 4px 2px rgba(0, 0, 0, .25)',
+        tab: '1.5px 0 1px rgba(0, 0, 0, 0.08)',
         year: '0 2px 0 rgba(74, 58, 128, .05)',
       },
       keyframes: {
