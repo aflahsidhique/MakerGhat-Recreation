@@ -2,13 +2,13 @@ import { useState } from 'react'
 import Logo from './Logo'
 
 const nav = [
-  ['About us', '#story', true],
-  ['Space', '#journey'],
-  ['Curriculum', '#mission', true],
-  ['Training', '#journey', true],
-  ['Evidence', '#journey'],
-  ['Programs', '#journey', true],
-  ['Get involved', '#connect'],
+  ['About us', '#', true],
+  ['Space', '#'],
+  ['Curriculum', '#', true],
+  ['Training', '#', true],
+  ['Evidence', '#'],
+  ['Programs', '#', true],
+  ['Get involved', '#'],
 ]
 
 export default function Header() {
@@ -17,10 +17,10 @@ export default function Header() {
     <header id="top" className="relative z-50 h-[109px] bg-white max-[900px]:h-[84px]">
       <div className="flex h-[109px] w-full items-center justify-between px-10 py-5 max-[900px]:h-[84px] max-[900px]:px-5 max-[900px]:py-3">
         <Logo />
-        <nav className="flex items-center justify-end max-[900px]:hidden" aria-label="Primary navigation">
+        <nav className="flex items-center justify-end max-[900px]:hidden gap-10" aria-label="Primary navigation">
           {nav.map(([label, href, plain], index) => (
-            <a className={`-ml-3 whitespace-nowrap rounded-[10px] px-5 py-[10px] text-lg leading-7 text-[#111] no-underline hover:bg-mg-cream hover:text-mg-purple ${index === 0 ? 'px-7' : ''}`} key={label} href={href}>
-              {label}{!plain && <span className="ml-[5px] text-[13px]" aria-hidden="true">⌄</span>}
+            <a className={"inline-flex items-center whitespace-nowrap rounded-[10px] py-2 text-lg leading-7 text-[#111] no-underline hover:font-semibold"} key={label} href={href}>
+              {label}{!plain && <img src="/assets/arrow-down.svg" alt="" className="ml-2 h-1.5 w-2.5 shrink-0" aria-hidden="true" />}
             </a>
           ))}
         </nav>
